@@ -1,713 +1,1745 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>عيد ميلاد سعيد زينب حسن 🎂</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/dancing-script@latest/arabic-400-normal.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/amiri@latest/arabic-400-normal.css">
+
+<title>شمس ميثم | تجميل وليزر</title>
+
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  
-  body {
-    font-family: 'Amiri', serif;
-    background: linear-gradient(135deg, #1a0033 0%, #330066 30%, #660066 60%, #cc0066 100%);
-    min-height: 100vh;
-    overflow-x: hidden;
-    color: white;
-    position: relative;
-  }
-  
-  /* Stars background */
-  .stars {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    pointer-events: none;
-    z-index: 0;
-  }
-  
-  .star {
-    position: absolute;
-    background: white;
-    border-radius: 50%;
-    animation: twinkle 3s infinite;
-  }
-  
-  @keyframes twinkle {
-    0%, 100% { opacity: 0.3; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.5); }
-  }
-  
-  /* Balloons */
-  .balloon {
-    position: fixed;
-    width: 50px;
-    height: 65px;
-    border-radius: 50%;
-    animation: float 8s ease-in-out infinite;
-    z-index: 1;
-  }
-  
-  .balloon::after {
-    content: '';
-    position: absolute;
-    bottom: -40px;
-    left: 50%;
-    width: 1px;
-    height: 40px;
-    background: rgba(255,255,255,0.5);
-  }
-  
-  @keyframes float {
-    0%, 100% { transform: translateY(0) rotate(-5deg); }
-    50% { transform: translateY(-30px) rotate(5deg); }
-  }
-  
-  /* Main container */
-  .container {
-    position: relative;
-    z-index: 10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-    text-align: center;
-  }
-  
-  /* Title */
-  .title {
-    font-family: 'Dancing Script', cursive;
-    font-size: clamp(3rem, 8vw, 6rem);
-    background: linear-gradient(45deg, #ffd700, #ff69b4, #ffd700, #ff69b4);
-    background-size: 300% 300%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: shimmer 3s ease-in-out infinite;
-    margin-bottom: 10px;
-    text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
-  }
-  
-  @keyframes shimmer {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-  }
-  
-  .arabic-title {
-    font-family: 'Amiri', serif;
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    color: #ffd700;
-    margin-bottom: 40px;
-    text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
-    animation: pulse 2s ease-in-out infinite;
-  }
-  
-  @keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-  }
-  
-  /* Cake */
-  .cake-wrapper {
-    position: relative;
-    cursor: pointer;
-    transition: transform 0.3s;
-    margin: 20px 0;
-  }
-  
-  .cake-wrapper:hover {
-    transform: scale(1.05);
-  }
-  
-  .cake {
-    position: relative;
-    width: 300px;
-    height: 280px;
-  }
-  
-  /* Cake layers */
-  .cake-layer {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-  }
-  
-  .layer-bottom {
-    bottom: 0;
-    width: 280px;
-    height: 90px;
-    background: linear-gradient(180deg, #ff69b4 0%, #ff1493 100%);
-    border-radius: 15px 15px 20px 20px;
-  }
-  
-  .layer-bottom::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: 0;
-    right: 0;
-    height: 20px;
-    background: linear-gradient(180deg, #fff 0%, #ffb6d9 100%);
-    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-  }
-  
-  .layer-middle {
-    bottom: 85px;
-    width: 220px;
-    height: 75px;
-    background: linear-gradient(180deg, #ff1493 0%, #c71585 100%);
-  }
-  
-  .layer-middle::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: 0;
-    right: 0;
-    height: 20px;
-    background: linear-gradient(180deg, #fff 0%, #ff69b4 100%);
-    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-  }
-  
-  .layer-top {
-    bottom: 155px;
-    width: 160px;
-    height: 65px;
-    background: linear-gradient(180deg, #ff69b4 0%, #ff1493 100%);
-  }
-  
-  .layer-top::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: 0;
-    right: 0;
-    height: 20px;
-    background: linear-gradient(180deg, #fff 0%, #ffb6d9 100%);
-    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-  }
-  
-  /* Decorations on cake */
-  .decoration {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background: #ffd700;
-    border-radius: 50%;
-    box-shadow: 0 0 10px #ffd700;
-  }
-  
-  /* Candles */
-  .candles {
-    position: absolute;
-    bottom: 215px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 25px;
-  }
-  
-  .candle {
-    position: relative;
-    width: 10px;
-    height: 40px;
-    background: linear-gradient(180deg, #fff 0%, #ffd700 50%, #ff69b4 100%);
-    border-radius: 3px;
-  }
-  
-  .flame {
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 14px;
-    height: 22px;
-    background: radial-gradient(circle at 50% 70%, #fff 0%, #ffeb3b 30%, #ff9800 60%, #ff5722 100%);
-    border-radius: 50% 50% 20% 20%;
-    animation: flicker 0.3s ease-in-out infinite alternate;
-    box-shadow: 0 0 20px #ff9800, 0 0 40px #ff5722;
-    transition: opacity 0.5s, transform 0.5s;
-  }
-  
-  .flame::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 6px;
-    height: 6px;
-    background: #2196f3;
-    border-radius: 50%;
-    opacity: 0.7;
-  }
-  
-  @keyframes flicker {
-    0% { transform: translateX(-50%) scale(1) rotate(-2deg); }
-    100% { transform: translateX(-50%) scale(1.1) rotate(2deg); }
-  }
-  
-  .flame.out {
-    opacity: 0;
-    transform: translateX(-50%) scale(0) rotate(0);
-  }
-  
-  /* Smoke */
-  .smoke {
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 10px;
-    height: 10px;
-    background: rgba(200,200,200,0.6);
-    border-radius: 50%;
-    opacity: 0;
-    pointer-events: none;
-  }
-  
-  .smoke.active {
-    animation: smokeRise 2s ease-out forwards;
-  }
-  
-  @keyframes smokeRise {
-    0% { opacity: 0.8; transform: translateX(-50%) translateY(0) scale(0.5); }
-    100% { opacity: 0; transform: translateX(-50%) translateY(-80px) scale(2); }
-  }
-  
-  .instruction {
-    margin-top: 30px;
-    font-size: 1.3rem;
-    color: #ffd700;
-    animation: bounce 1.5s ease-in-out infinite;
-    font-family: 'Amiri', serif;
-  }
-  
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-  
-  /* Clapping hands */
-  .clap-container {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    pointer-events: none;
-    z-index: 100;
-    display: none;
-  }
-  
-  .clap-container.active {
-    display: block;
-  }
-  
-  .clap-hand {
-    position: absolute;
-    font-size: 4rem;
-    animation: clapAnim 1s ease-in-out infinite;
-    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
-  }
-  
-  @keyframes clapAnim {
-    0%, 100% { transform: scale(1) rotate(-10deg); }
-    50% { transform: scale(1.3) rotate(10deg); }
-  }
-  
-  /* Confetti */
-  .confetti {
-    position: fixed;
-    width: 10px;
-    height: 10px;
-    top: -10px;
-    z-index: 50;
-    animation: confettiFall 4s linear forwards;
-  }
-  
-  @keyframes confettiFall {
-    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-    100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
-  }
-  
-  /* Message after candles blown */
-  .wish-message {
-    margin-top: 30px;
-    font-family: 'Dancing Script', cursive;
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    color: #fff;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s, transform 1s;
-    text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
-  }
-  
-  .wish-message.show {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .wish-message .name {
-    color: #ffd700;
-    font-size: 1.3em;
-    display: block;
-    margin-top: 10px;
-  }
-  
-  /* Music button */
-  .music-btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #ff69b4, #ff1493);
-    border: 2px solid #ffd700;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    z-index: 200;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
-    transition: transform 0.3s;
-  }
-  
-  .music-btn:hover {
-    transform: scale(1.1);
-  }
-  
-  .music-btn.playing {
-    animation: musicPulse 1s ease-in-out infinite;
-  }
-  
-  @keyframes musicPulse {
-    0%, 100% { box-shadow: 0 0 20px rgba(255, 105, 180, 0.6); }
-    50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.9); }
-  }
-  
-  /* Hearts floating */
-  .heart {
-    position: fixed;
-    font-size: 2rem;
-    animation: heartFloat 4s ease-in-out forwards;
-    pointer-events: none;
-    z-index: 50;
-  }
-  
-  @keyframes heartFloat {
-    0% { transform: translateY(0) scale(0); opacity: 0; }
-    20% { opacity: 1; transform: translateY(-20px) scale(1); }
-    100% { transform: translateY(-300px) scale(1.5); opacity: 0; }
-  }
-  
-  @media (max-width: 600px) {
-    .cake { transform: scale(0.85); }
-    .balloon { width: 35px; height: 45px; }
-  }
+
+*{
+    box-sizing:border-box;
+}
+
+:root{
+    --pink:#e84b91;
+    --pink2:#ff77b6;
+    --purple:#7656d6;
+    --dark:#171321;
+    --card:#ffffff;
+    --bg:#fff7fb;
+    --text:#29222d;
+    --muted:#817681;
+    --border:#f0dce8;
+    --success:#32b67a;
+    --danger:#e74c67;
+}
+
+body{
+    margin:0;
+    font-family:
+        "Segoe UI",
+        Tahoma,
+        Arial,
+        sans-serif;
+
+    background:
+        radial-gradient(circle at top right,#ffe1ef,transparent 35%),
+        radial-gradient(circle at bottom left,#e7ddff,transparent 35%),
+        var(--bg);
+
+    color:var(--text);
+}
+
+/* ================= HEADER ================= */
+
+.header{
+    position:sticky;
+    top:0;
+    z-index:100;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(255,255,255,.86);
+
+    border-bottom:1px solid var(--border);
+
+    padding:14px 20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:20px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo{
+    width:52px;
+    height:52px;
+
+    border-radius:18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff75b7,
+            #8a63df
+        );
+
+    color:white;
+
+    box-shadow:
+        0 8px 25px rgba(150,80,150,.25);
+}
+
+.brandText h1{
+    margin:0;
+    font-size:18px;
+}
+
+.brandText span{
+    font-size:12px;
+    color:var(--muted);
+}
+
+.userArea{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.loginBtn{
+    border:0;
+
+    background:#16131b;
+    color:white;
+
+    padding:11px 18px;
+
+    border-radius:13px;
+
+    cursor:pointer;
+
+    font-weight:700;
+}
+
+.loginBtn:hover{
+    transform:translateY(-1px);
+}
+
+.userInfo{
+    display:none;
+    align-items:center;
+    gap:8px;
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    padding:6px 10px;
+
+    border-radius:14px;
+}
+
+.avatar{
+    width:32px;
+    height:32px;
+
+    border-radius:50%;
+}
+
+/* ================= HERO ================= */
+
+.container{
+    width:min(1200px,94%);
+    margin:auto;
+}
+
+.hero{
+    padding:50px 0 30px;
+}
+
+.heroBox{
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.92),
+            rgba(255,238,248,.92)
+        );
+
+    border:1px solid var(--border);
+
+    border-radius:30px;
+
+    padding:38px;
+
+    box-shadow:
+        0 25px 70px rgba(110,70,110,.12);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.heroBox::after{
+    content:"✦";
+
+    position:absolute;
+
+    font-size:180px;
+
+    left:-25px;
+    bottom:-80px;
+
+    color:rgba(232,75,145,.06);
+}
+
+.badge{
+    display:inline-flex;
+
+    background:#ffe4f1;
+
+    color:#b52b6b;
+
+    padding:8px 13px;
+
+    border-radius:100px;
+
+    font-size:13px;
+
+    font-weight:700;
+}
+
+.hero h2{
+    font-size:clamp(30px,5vw,52px);
+
+    margin:18px 0 10px;
+
+    line-height:1.1;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d72c78,
+            #7656d6
+        );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+}
+
+.hero p{
+    max-width:700px;
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+    margin:0;
+}
+
+/* ================= UPLOAD ================= */
+
+.uploadCard{
+    margin-top:25px;
+
+    background:white;
+
+    border:2px dashed #e8bfd5;
+
+    border-radius:24px;
+
+    padding:35px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.uploadCard:hover{
+    border-color:var(--pink);
+
+    background:#fffafd;
+}
+
+.uploadIcon{
+    font-size:48px;
+}
+
+.uploadCard h3{
+    margin:10px 0 5px;
+}
+
+.uploadCard p{
+    color:var(--muted);
+
+    margin:0;
+}
+
+#pdfInput{
+    display:none;
+}
+
+/* ================= CONTROL ================= */
+
+.controls{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:20px;
+}
+
+button{
+    font-family:inherit;
+}
+
+.primary{
+    border:0;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--pink),
+            var(--purple)
+        );
+
+    color:white;
+
+    padding:13px 20px;
+
+    border-radius:14px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 10px 25px rgba(180,70,140,.2);
+}
+
+.secondary{
+    border:1px solid var(--border);
+
+    background:white;
+
+    color:var(--text);
+
+    padding:13px 20px;
+
+    border-radius:14px;
+
+    font-weight:700;
+
+    cursor:pointer;
+}
+
+.danger{
+    border:0;
+
+    background:#ffe4e9;
+
+    color:#bd3450;
+
+    padding:13px 20px;
+
+    border-radius:14px;
+
+    font-weight:700;
+
+    cursor:pointer;
+}
+
+button:disabled{
+    opacity:.45;
+    cursor:not-allowed;
+}
+
+/* ================= STATUS ================= */
+
+.statusBox{
+    display:none;
+
+    margin-top:25px;
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:20px;
+}
+
+.progress{
+    height:12px;
+
+    background:#f3e8f0;
+
+    border-radius:100px;
+
+    overflow:hidden;
+
+    margin-top:12px;
+}
+
+.progressBar{
+    width:0%;
+
+    height:100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--pink),
+            var(--purple)
+        );
+
+    transition:.3s;
+}
+
+.statusText{
+    font-size:14px;
+
+    color:var(--muted);
+
+    margin-top:10px;
+}
+
+/* ================= SLIDES ================= */
+
+#slides{
+    margin-top:35px;
+
+    display:grid;
+
+    gap:25px;
+}
+
+.slide{
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 12px 40px rgba(70,40,70,.07);
+}
+
+.slideHeader{
+    padding:17px 20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:10px;
+
+    border-bottom:1px solid var(--border);
+
+    background:#fffafd;
+}
+
+.slideNumber{
+    font-weight:900;
+
+    color:#b62c6c;
+}
+
+.slideStatus{
+    font-size:12px;
+
+    padding:6px 10px;
+
+    border-radius:100px;
+
+    background:#f5eef5;
+
+    color:var(--muted);
+}
+
+.slideStatus.done{
+    background:#ddf8eb;
+
+    color:#188359;
+}
+
+.slideStatus.generating{
+    background:#fff0d9;
+
+    color:#a96700;
+}
+
+.slideBody{
+    padding:20px;
+}
+
+.columns{
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:20px;
+}
+
+.panel{
+    background:#faf8fb;
+
+    border:1px solid var(--border);
+
+    border-radius:17px;
+
+    overflow:hidden;
+}
+
+.panelTitle{
+    padding:12px 15px;
+
+    font-weight:800;
+
+    background:#fff;
+
+    border-bottom:1px solid var(--border);
+}
+
+.panelContent{
+    padding:15px;
+
+    white-space:pre-wrap;
+
+    word-break:break-word;
+
+    line-height:1.7;
+
+    font-size:13px;
+
+    max-height:300px;
+
+    overflow:auto;
+}
+
+.imageArea{
+    margin-top:20px;
+
+    border-radius:20px;
+
+    background:#faf8fb;
+
+    border:1px solid var(--border);
+
+    min-height:180px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+}
+
+.imageArea img{
+    width:100%;
+
+    display:block;
+}
+
+.placeholder{
+    text-align:center;
+
+    color:var(--muted);
+
+    padding:35px;
+}
+
+.slideActions{
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin-top:15px;
+}
+
+/* ================= EMPTY ================= */
+
+.empty{
+    text-align:center;
+
+    color:var(--muted);
+
+    padding:50px 20px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    text-align:center;
+
+    color:var(--muted);
+
+    padding:40px 20px;
+
+    font-size:13px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:750px){
+
+    .header{
+        padding:10px 12px;
+    }
+
+    .brandText h1{
+        font-size:15px;
+    }
+
+    .hero{
+        padding-top:25px;
+    }
+
+    .heroBox{
+        padding:25px 20px;
+    }
+
+    .columns{
+        grid-template-columns:1fr;
+    }
+
+    .uploadCard{
+        padding:25px 15px;
+    }
+
+    .userInfo span{
+        display:none;
+    }
+
+}
+
 </style>
 </head>
+
+
 <body>
 
-<div class="stars" id="stars"></div>
+<!-- ================= HEADER ================= -->
 
-<button class="music-btn" id="musicBtn" title="تشغيل الموسيقى">🎵</button>
+<header class="header">
 
-<div class="container">
-  <h1 class="title">Happy Birthday</h1>
-  <p class="arabic-title">✨ عيد ميلاد سعيد ✨</p>
-  
-  <div class="cake-wrapper" id="cakeWrapper">
-    <div class="cake">
-      <!-- Candles -->
-      <div class="candles" id="candles">
-        <div class="candle"><div class="flame"></div><div class="smoke"></div></div>
-        <div class="candle"><div class="flame"></div><div class="smoke"></div></div>
-        <div class="candle"><div class="flame"></div><div class="smoke"></div></div>
-        <div class="candle"><div class="flame"></div><div class="smoke"></div></div>
-        <div class="candle"><div class="flame"></div><div class="smoke"></div></div>
-      </div>
-      
-      <!-- Cake layers -->
-      <div class="cake-layer layer-top"></div>
-      <div class="cake-layer layer-middle"></div>
-      <div class="cake-layer layer-bottom"></div>
-      
-      <!-- Decorations -->
-      <div class="decoration" style="bottom: 40px; left: 30px;"></div>
-      <div class="decoration" style="bottom: 60px; left: 80px;"></div>
-      <div class="decoration" style="bottom: 40px; left: 130px;"></div>
-      <div class="decoration" style="bottom: 60px; left: 180px;"></div>
-      <div class="decoration" style="bottom: 40px; left: 230px;"></div>
+    <div class="brand">
+
+        <div class="logo">
+            ✨
+        </div>
+
+        <div class="brandText">
+
+            <h1>
+                شمس ميثم
+            </h1>
+
+            <span>
+                تجميل وليزر • منصة تعليمية
+            </span>
+
+        </div>
+
     </div>
-  </div>
-  
-  <p class="instruction" id="instruction">🕯️ اضغط على الكيكة لإطفاء الشموع 🕯️</p>
-  
-  <div class="wish-message" id="wishMessage">
-    Happy Birthday to You!
-    <span class="name">زينب حسن 💖</span>
-  </div>
-</div>
 
-<div class="clap-container" id="clapContainer"></div>
 
-<script>
-  // Create stars
-  const starsContainer = document.getElementById('stars');
-  for (let i = 0; i < 80; i++) {
-    const star = document.createElement('div');
-    star.className = 'star';
-    const size = Math.random() * 3 + 1;
-    star.style.width = size + 'px';
-    star.style.height = size + 'px';
-    star.style.top = Math.random() * 100 + '%';
-    star.style.left = Math.random() * 100 + '%';
-    star.style.animationDelay = Math.random() * 3 + 's';
-    starsContainer.appendChild(star);
-  }
-  
-  // Create balloons
-  const colors = ['#ff69b4', '#ffd700', '#ff1493', '#9370db', '#00ced1', '#ff6347'];
-  for (let i = 0; i < 10; i++) {
-    const balloon = document.createElement('div');
-    balloon.className = 'balloon';
-    balloon.style.background = `radial-gradient(circle at 30% 30%, ${colors[i % colors.length]}, ${colors[(i+2) % colors.length]})`;
-    balloon.style.left = Math.random() * 100 + '%';
-    balloon.style.top = (Math.random() * 60 + 20) + '%';
-    balloon.style.animationDelay = Math.random() * 5 + 's';
-    balloon.style.animationDuration = (Math.random() * 4 + 6) + 's';
-    document.body.appendChild(balloon);
-  }
-  
-  // Happy Birthday melody using Web Audio API
-  let audioCtx = null;
-  let isPlaying = false;
-  let melodyTimeout = [];
-  
-  // Happy Birthday notes (frequencies in Hz) and durations
-  const melody = [
-    // Happy birthday to you
-    { note: 'C4', dur: 0.3 }, { note: 'C4', dur: 0.3 }, { note: 'D4', dur: 0.6 },
-    { note: 'C4', dur: 0.6 }, { note: 'F4', dur: 0.6 }, { note: 'E4', dur: 1.2 },
-    // Happy birthday to you
-    { note: 'C4', dur: 0.3 }, { note: 'C4', dur: 0.3 }, { note: 'D4', dur: 0.6 },
-    { note: 'C4', dur: 0.6 }, { note: 'G4', dur: 0.6 }, { note: 'F4', dur: 1.2 },
-    // Happy birthday dear Zainab
-    { note: 'C4', dur: 0.3 }, { note: 'C4', dur: 0.3 }, { note: 'C5', dur: 0.6 },
-    { note: 'A4', dur: 0.6 }, { note: 'F4', dur: 0.6 }, { note: 'E4', dur: 0.6 }, { note: 'D4', dur: 1.2 },
-    // Happy birthday to you
-    { note: 'Bb4', dur: 0.3 }, { note: 'Bb4', dur: 0.3 }, { note: 'A4', dur: 0.6 },
-    { note: 'F4', dur: 0.6 }, { note: 'G4', dur: 0.6 }, { note: 'F4', dur: 1.5 }
-  ];
-  
-  const noteFreqs = {
-    'C4': 261.63, 'D4': 293.66, 'E4': 329.63, 'F4': 349.23,
-    'G4': 392.00, 'A4': 440.00, 'Bb4': 466.16, 'B4': 493.88,
-    'C5': 523.25
-  };
-  
-  function playNote(freq, startTime, duration) {
-    const osc = audioCtx.createOscillator();
-    const gain = audioCtx.createGain();
-    
-    osc.type = 'sine';
-    osc.frequency.value = freq;
-    
-    // Add harmonics for richer sound
-    const osc2 = audioCtx.createOscillator();
-    const gain2 = audioCtx.createGain();
-    osc2.type = 'triangle';
-    osc2.frequency.value = freq * 2;
-    gain2.gain.value = 0.1;
-    
-    gain.gain.setValueAtTime(0, startTime);
-    gain.gain.linearRampToValueAtTime(0.3, startTime + 0.02);
-    gain.gain.linearRampToValueAtTime(0.25, startTime + duration * 0.7);
-    gain.gain.linearRampToValueAtTime(0, startTime + duration);
-    
-    gain2.gain.setValueAtTime(0, startTime);
-    gain2.gain.linearRampToValueAtTime(0.08, startTime + 0.02);
-    gain2.gain.linearRampToValueAtTime(0, startTime + duration);
-    
-    osc.connect(gain);
-    osc2.connect(gain2);
-    gain.connect(audioCtx.destination);
-    gain2.connect(audioCtx.destination);
-    
-    osc.start(startTime);
-    osc.stop(startTime + duration);
-    osc2.start(startTime);
-    osc2.stop(startTime + duration);
-  }
-  
-  function playMelody() {
-    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    
-    let time = audioCtx.currentTime + 0.1;
-    melody.forEach(n => {
-      playNote(noteFreqs[n.note], time, n.dur);
-      time += n.dur;
-    });
-    
-    return time - audioCtx.currentTime;
-  }
-  
-  const musicBtn = document.getElementById('musicBtn');
-  musicBtn.addEventListener('click', () => {
-    if (!isPlaying) {
-      const duration = playMelody();
-      isPlaying = true;
-      musicBtn.classList.add('playing');
-      musicBtn.textContent = '🎶';
-      
-      // Loop the melody
-      const loopInterval = setInterval(() => {
-        if (isPlaying) {
-          playMelody();
-        } else {
-          clearInterval(loopInterval);
+    <div class="userArea">
+
+        <button
+            id="loginBtn"
+            class="loginBtn"
+        >
+            🤗 تسجيل الدخول بـ Hugging Face
+        </button>
+
+
+        <div
+            id="userInfo"
+            class="userInfo"
+        >
+
+            <img
+                id="avatar"
+                class="avatar"
+                src=""
+                alt=""
+            >
+
+            <span id="username"></span>
+
+            <button
+                id="logoutBtn"
+                class="secondary"
+                style="padding:7px 10px;"
+            >
+                خروج
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="heroBox">
+
+        <div class="badge">
+            ✨ AI Study Studio
+        </div>
+
+        <h2>
+            محاضرتچ تتحول إلى
+            صور تعليمية
+        </h2>
+
+        <p>
+            ارفعي محاضرة الـPDF، والموقع يقرأها من أول صفحة
+            إلى آخر صفحة، ويصنع لكل سلايد Prompt خاص بيه
+            ثم يولد صورة تعليمية منفصلة.
+        </p>
+
+
+        <!-- UPLOAD -->
+
+        <label
+            class="uploadCard"
+            for="pdfInput"
+        >
+
+            <div class="uploadIcon">
+                📚
+            </div>
+
+            <h3>
+                اختاري محاضرة PDF
+            </h3>
+
+            <p>
+                اضغطي هنا لاختيار ملف المحاضرة
+            </p>
+
+        </label>
+
+
+        <input
+            id="pdfInput"
+            type="file"
+            accept="application/pdf"
+        >
+
+
+        <!-- CONTROLS -->
+
+        <div class="controls">
+
+            <button
+                id="processBtn"
+                class="primary"
+                disabled
+            >
+                🔍 قراءة المحاضرة
+            </button>
+
+            <button
+                id="generateBtn"
+                class="primary"
+                disabled
+            >
+                ✨ توليد كل الصور
+            </button>
+
+            <button
+                id="stopBtn"
+                class="danger"
+                disabled
+            >
+                ⏹ إيقاف
+            </button>
+
+        </div>
+
+
+        <!-- STATUS -->
+
+        <div
+            id="statusBox"
+            class="statusBox"
+        >
+
+            <b id="progressTitle">
+                جاهز
+            </b>
+
+            <div class="progress">
+
+                <div
+                    id="progressBar"
+                    class="progressBar"
+                ></div>
+
+            </div>
+
+            <div
+                id="statusText"
+                class="statusText"
+            >
+                -
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SLIDES ================= -->
+
+<section id="slides">
+
+    <div class="empty">
+
+        📚
+        <br><br>
+
+        اختاري محاضرة حتى تظهر السلايدات هنا
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    ✨ شمس ميثم — تجميل وليزر
+    <br>
+    Educational AI Studio
+
+</footer>
+
+
+<!-- PDF.JS -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.min.mjs"
+type="module"></script>
+
+
+<!-- ================= APP ================= -->
+
+<script type="module">
+
+/* =====================================================
+   HUGGING FACE OAUTH
+===================================================== */
+
+import {
+    oauthLoginUrl,
+    oauthHandleRedirectIfPresent
+}
+from "https://cdn.jsdelivr.net/npm/@huggingface/hub@0.18.0/+esm";
+
+
+let hfUser = null;
+let hfToken = null;
+
+
+/* LOGIN */
+
+async function initializeHF(){
+
+    try{
+
+        const result =
+            await oauthHandleRedirectIfPresent();
+
+        if(result){
+
+            hfUser =
+                result.userInfo;
+
+            hfToken =
+                result.accessToken;
+
+            showUser();
+
+            return;
         }
-      }, duration * 1000);
-      melodyTimeout.push(loopInterval);
-    } else {
-      isPlaying = false;
-      musicBtn.classList.remove('playing');
-      musicBtn.textContent = '🎵';
-      if (audioCtx) audioCtx.close();
-      audioCtx = null;
+
+    }catch(error){
+
+        console.error(
+            "OAuth redirect error:",
+            error
+        );
+
     }
-  });
-  
-  // Auto-play on first interaction
-  let autoPlayed = false;
-  document.addEventListener('click', () => {
-    if (!autoPlayed && !isPlaying) {
-      autoPlayed = true;
-      musicBtn.click();
-    }
-  }, { once: false });
-  
-  // Cake click - blow out candles
-  const cakeWrapper = document.getElementById('cakeWrapper');
-  const flames = document.querySelectorAll('.flame');
-  const smokes = document.querySelectorAll('.smoke');
-  const instruction = document.getElementById('instruction');
-  const wishMessage = document.getElementById('wishMessage');
-  const clapContainer = document.getElementById('clapContainer');
-  let candlesBlown = false;
-  
-  cakeWrapper.addEventListener('click', () => {
-    if (candlesBlown) return;
-    candlesBlown = true;
-    
-    // Blow out flames one by one
-    flames.forEach((flame, i) => {
-      setTimeout(() => {
-        flame.classList.add('out');
-        smokes[i].classList.add('active');
-      }, i * 200);
-    });
-    
-    // After all candles out
-    setTimeout(() => {
-      instruction.style.display = 'none';
-      wishMessage.classList.add('show');
-      clapContainer.classList.add('active');
-      startClapping();
-      launchConfetti();
-      launchHearts();
-    }, flames.length * 200 + 500);
-  });
-  
-  // Clapping hands animation
-  function startClapping() {
-    const hands = ['👏', '🙌', '👏', '🙌', '👏'];
-    const positions = [
-      { top: '15%', left: '10%' },
-      { top: '20%', right: '10%' },
-      { top: '60%', left: '5%' },
-      { top: '65%', right: '8%' },
-      { top: '80%', left: '15%' },
-      { top: '80%', right: '12%' },
-      { top: '40%', left: '3%' },
-      { top: '40%', right: '3%' }
-    ];
-    
-    positions.forEach((pos, i) => {
-      const hand = document.createElement('div');
-      hand.className = 'clap-hand';
-      hand.textContent = hands[i % hands.length];
-      Object.keys(pos).forEach(k => hand.style[k] = pos[k]);
-      hand.style.animationDelay = (i * 0.15) + 's';
-      clapContainer.appendChild(hand);
-    });
-  }
-  
-  // Confetti
-  function launchConfetti() {
-    const confettiColors = ['#ff69b4', '#ffd700', '#ff1493', '#9370db', '#00ced1', '#ff6347', '#7fff00'];
-    const shapes = ['circle', 'square'];
-    
-    for (let i = 0; i < 80; i++) {
-      setTimeout(() => {
-        const confetti = document.createElement('div');
-        confetti.className = 'confetti';
-        confetti.style.left = Math.random() * 100 + '%';
-        confetti.style.background = confettiColors[Math.floor(Math.random() * confettiColors.length)];
-        confetti.style.animationDuration = (Math.random() * 2 + 3) + 's';
-        confetti.style.animationDelay = Math.random() * 0.5 + 's';
-        if (shapes[Math.floor(Math.random() * 2)] === 'circle') {
-          confetti.style.borderRadius = '50%';
+
+}
+
+
+/* LOGIN BUTTON */
+
+document
+.getElementById("loginBtn")
+.addEventListener(
+    "click",
+    async ()=>{
+
+        try{
+
+            const url =
+                await oauthLoginUrl();
+
+            window.location.href =
+                url;
+
+        }catch(error){
+
+            alert(
+                "تعذر فتح تسجيل الدخول بـ Hugging Face"
+            );
+
+            console.error(error);
+
         }
-        confetti.style.width = (Math.random() * 8 + 6) + 'px';
-        confetti.style.height = confetti.style.width;
-        document.body.appendChild(confetti);
-        
-        setTimeout(() => confetti.remove(), 5000);
-      }, i * 50);
+
     }
-    
-    // Repeat confetti
-    setInterval(() => {
-      for (let i = 0; i < 30; i++) {
-        setTimeout(() => {
-          const confetti = document.createElement('div');
-          confetti.className = 'confetti';
-          confetti.style.left = Math.random() * 100 + '%';
-          confetti.style.background = confettiColors[Math.floor(Math.random() * confettiColors.length)];
-          confetti.style.animationDuration = (Math.random() * 2 + 3) + 's';
-          confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
-          confetti.style.width = (Math.random() * 8 + 6) + 'px';
-          confetti.style.height = confetti.style.width;
-          document.body.appendChild(confetti);
-          setTimeout(() => confetti.remove(), 5000);
-        }, i * 80);
-      }
-    }, 4000);
-  }
-  
-  // Floating hearts
-  function launchHearts() {
-    const heartEmojis = ['💖', '💕', '💗', '💝', '✨', '🌟'];
-    
-    setInterval(() => {
-      const heart = document.createElement('div');
-      heart.className = 'heart';
-      heart.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
-      heart.style.left = Math.random() * 100 + '%';
-      heart.style.bottom = '0';
-      heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
-      document.body.appendChild(heart);
-      setTimeout(() => heart.remove(), 5000);
-    }, 400);
-  }
+);
+
+
+/* SHOW USER */
+
+function showUser(){
+
+    if(!hfUser)
+        return;
+
+
+    document
+    .getElementById("loginBtn")
+    .style.display="none";
+
+
+    document
+    .getElementById("userInfo")
+    .style.display="flex";
+
+
+    document
+    .getElementById("username")
+    .textContent =
+        hfUser.preferred_username ||
+        hfUser.name ||
+        "Hugging Face User";
+
+
+    if(hfUser.picture){
+
+        document
+        .getElementById("avatar")
+        .src =
+            hfUser.picture;
+
+    }
+
+}
+
+
+/* LOGOUT */
+
+document
+.getElementById("logoutBtn")
+.addEventListener(
+    "click",
+    ()=>{
+
+        hfUser=null;
+        hfToken=null;
+
+        localStorage.clear();
+
+        location.reload();
+
+    }
+);
+
+
+/* START AUTH */
+
+await initializeHF();
+
+
+/* =====================================================
+   PDF.JS
+===================================================== */
+
+const pdfjsLib =
+    await import(
+        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.min.mjs"
+    );
+
+
+pdfjsLib
+.GlobalWorkerOptions
+.workerSrc =
+"https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.min.mjs";
+
+
+/* =====================================================
+   ELEMENTS
+===================================================== */
+
+const pdfInput =
+    document.getElementById("pdfInput");
+
+const processBtn =
+    document.getElementById("processBtn");
+
+const generateBtn =
+    document.getElementById("generateBtn");
+
+const stopBtn =
+    document.getElementById("stopBtn");
+
+const slidesContainer =
+    document.getElementById("slides");
+
+const statusBox =
+    document.getElementById("statusBox");
+
+const progressBar =
+    document.getElementById("progressBar");
+
+const progressTitle =
+    document.getElementById("progressTitle");
+
+const statusText =
+    document.getElementById("statusText");
+
+
+let selectedFile = null;
+
+let slides = [];
+
+let stopRequested = false;
+
+
+/* =====================================================
+   FIXED PROMPT
+===================================================== */
+
+const FIXED_PROMPT =
+
+"Make a diagram showing the following write and draw every detail (dont skip any word & dont add any word) use alot of drawings & illustrations (white background)";
+
+
+/* =====================================================
+   FILE SELECT
+===================================================== */
+
+pdfInput.addEventListener(
+    "change",
+    ()=>{
+
+        selectedFile =
+            pdfInput.files[0];
+
+        if(!selectedFile)
+            return;
+
+
+        processBtn.disabled=false;
+
+        generateBtn.disabled=true;
+
+        slides=[];
+
+        slidesContainer.innerHTML="";
+
+
+        showStatus(
+            "تم اختيار المحاضرة",
+            selectedFile.name
+        );
+
+    }
+);
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+function showStatus(
+    title,
+    text
+){
+
+    statusBox.style.display="block";
+
+    progressTitle.textContent =
+        title;
+
+    statusText.textContent =
+        text;
+
+}
+
+
+/* =====================================================
+   READ PDF
+===================================================== */
+
+processBtn.addEventListener(
+    "click",
+    async ()=>{
+
+        if(!selectedFile)
+            return;
+
+
+        processBtn.disabled=true;
+
+        slides=[];
+
+        slidesContainer.innerHTML="";
+
+
+        showStatus(
+            "جاري قراءة المحاضرة",
+            "انتظري... يتم استخراج كل صفحة"
+        );
+
+
+        try{
+
+            const buffer =
+                await selectedFile.arrayBuffer();
+
+
+            const pdf =
+                await pdfjsLib
+                .getDocument({
+                    data:buffer
+                })
+                .promise;
+
+
+            const total =
+                pdf.numPages;
+
+
+            for(
+                let pageNumber=1;
+                pageNumber<=total;
+                pageNumber++
+            ){
+
+                const page =
+                    await pdf
+                    .getPage(pageNumber);
+
+
+                const content =
+                    await page
+                    .getTextContent();
+
+
+                const text =
+                    content.items
+                    .map(
+                        item =>
+                            item.str
+                    )
+                    .join(" ")
+                    .trim();
+
+
+                const prompt =
+                    text +
+                    "\n\n" +
+                    FIXED_PROMPT;
+
+
+                slides.push({
+
+                    number:
+                        pageNumber,
+
+                    text:
+                        text,
+
+                    prompt:
+                        prompt,
+
+                    image:
+                        null,
+
+                    status:
+                        "waiting"
+
+                });
+
+
+                updateProgress(
+                    pageNumber,
+                    total,
+                    `قراءة السلايد ${pageNumber} من ${total}`
+                );
+
+            }
+
+
+            renderSlides();
+
+
+            generateBtn.disabled =
+                slides.length===0;
+
+
+            showStatus(
+                "تمت قراءة المحاضرة",
+                `${slides.length} سلايد جاهز للتوليد`
+            );
+
+
+        }catch(error){
+
+            console.error(error);
+
+            showStatus(
+                "حدث خطأ",
+                error.message
+            );
+
+
+        }finally{
+
+            processBtn.disabled=false;
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   RENDER SLIDES
+===================================================== */
+
+function renderSlides(){
+
+    slidesContainer.innerHTML="";
+
+
+    if(slides.length===0){
+
+        slidesContainer.innerHTML =
+            `<div class="empty">
+                لا توجد صفحات
+            </div>`;
+
+        return;
+
+    }
+
+
+    slides.forEach(
+        slide=>{
+
+            const el =
+                document
+                .createElement("article");
+
+
+            el.className="slide";
+
+
+            el.id =
+                `slide-${slide.number}`;
+
+
+            el.innerHTML = `
+
+                <div class="slideHeader">
+
+                    <div class="slideNumber">
+                        سلايد ${slide.number}
+                    </div>
+
+                    <div
+                        class="slideStatus"
+                        id="status-${slide.number}"
+                    >
+                        بانتظار التوليد
+                    </div>
+
+                </div>
+
+
+                <div class="slideBody">
+
+                    <div class="columns">
+
+                        <div class="panel">
+
+                            <div class="panelTitle">
+                                📖 النص الأصلي
+                            </div>
+
+                            <div class="panelContent">
+                                ${escapeHTML(slide.text)}
+                            </div>
+
+                        </div>
+
+
+                        <div class="panel">
+
+                            <div class="panelTitle">
+                                ✨ Prompt الخاص بالسلايد
+                            </div>
+
+                            <div class="panelContent">
+                                ${escapeHTML(slide.prompt)}
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="imageArea"
+                        id="image-${slide.number}"
+                    >
+
+                        <div class="placeholder">
+                            🖼️
+                            <br><br>
+                            الصورة التعليمية ستظهر هنا
+                        </div>
+
+                    </div>
+
+
+                    <div class="slideActions">
+
+                        <button
+                            class="primary"
+                            onclick="generateSingle(${slide.number})"
+                        >
+                            ✨ توليد هذا السلايد
+                        </button>
+
+                    </div>
+
+                </div>
+            `;
+
+
+            slidesContainer.appendChild(el);
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   GENERATE ALL
+===================================================== */
+
+generateBtn.addEventListener(
+    "click",
+    async ()=>{
+
+        if(slides.length===0)
+            return;
+
+
+        stopRequested=false;
+
+        stopBtn.disabled=false;
+
+        generateBtn.disabled=true;
+
+
+        for(
+            let i=0;
+            i<slides.length;
+            i++
+        ){
+
+            if(stopRequested)
+                break;
+
+
+            const slide =
+                slides[i];
+
+
+            /* already generated */
+
+            if(slide.image)
+                continue;
+
+
+            await generateSlide(
+                slide
+            );
+
+
+            updateProgress(
+                i+1,
+                slides.length,
+                `توليد السلايد ${i+1} من ${slides.length}`
+            );
+
+        }
+
+
+        stopBtn.disabled=true;
+
+        generateBtn.disabled=false;
+
+
+        if(stopRequested){
+
+            showStatus(
+                "تم الإيقاف",
+                "يمكن الضغط على توليد كل الصور للمتابعة"
+            );
+
+        }else{
+
+            showStatus(
+                "اكتمل التوليد ✨",
+                `تمت معالجة ${slides.length} سلايد`
+            );
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   STOP
+===================================================== */
+
+stopBtn.addEventListener(
+    "click",
+    ()=>{
+
+        stopRequested=true;
+
+        stopBtn.disabled=true;
+
+    }
+);
+
+
+/* =====================================================
+   SINGLE
+===================================================== */
+
+window.generateSingle =
+async function(number){
+
+    const slide =
+        slides.find(
+            s=>s.number===number
+        );
+
+
+    if(!slide)
+        return;
+
+
+    await generateSlide(
+        slide
+    );
+
+};
+
+
+/* =====================================================
+   GENERATE SLIDE
+===================================================== */
+
+async function generateSlide(slide){
+
+    setSlideStatus(
+        slide.number,
+        "generating",
+        "جاري التوليد..."
+    );
+
+
+    try{
+
+        /*
+          هنا نستخدم Hugging Face Inference API
+          مع تسجيل الدخول.
+        */
+
+        if(!hfToken){
+
+            throw new Error(
+                "يجب تسجيل الدخول إلى Hugging Face أولاً."
+            );
+
+        }
+
+
+        const response =
+            await fetch(
+                "https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-schnell",
+                {
+
+                    method:"POST",
+
+                    headers:{
+                        "Authorization":
+                            `Bearer ${hfToken}`,
+
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body:
+                        JSON.stringify({
+
+                            inputs:
+                                slide.prompt
+
+                        })
+
+                }
+            );
+
+
+        if(!response.ok){
+
+            const message =
+                await response.text();
+
+            throw new Error(
+                `Hugging Face error ${response.status}: ${message}`
+            );
+
+        }
+
+
+        const blob =
+            await response.blob();
+
+
+        const imageURL =
+            URL.createObjectURL(blob);
+
+
+        slide.image =
+            imageURL;
+
+
+        slide.status =
+            "done";
+
+
+        showImage(
+            slide.number,
+            imageURL
+        );
+
+
+        setSlideStatus(
+            slide.number,
+            "done",
+            "تم التوليد ✓"
+        );
+
+
+    }catch(error){
+
+        console.error(error);
+
+
+        setSlideStatus(
+            slide.number,
+            "",
+            "فشل التوليد"
+        );
+
+
+        const area =
+            document.getElementById(
+                `image-${slide.number}`
+            );
+
+
+        area.innerHTML = `
+
+            <div class="placeholder">
+
+                ❌
+
+                <br><br>
+
+                ${escapeHTML(error.message)}
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+/* =====================================================
+   SHOW IMAGE
+===================================================== */
+
+function showImage(
+    number,
+    url
+){
+
+    const area =
+        document.getElementById(
+            `image-${number}`
+        );
+
+
+    area.innerHTML="";
+
+
+    const img =
+        document.createElement("img");
+
+
+    img.src=url;
+
+    img.alt=
+        `Educational slide ${number}`;
+
+
+    area.appendChild(img);
+
+}
+
+
+/* =====================================================
+   STATUS PER SLIDE
+===================================================== */
+
+function setSlideStatus(
+    number,
+    type,
+    text
+){
+
+    const el =
+        document.getElementById(
+            `status-${number}`
+        );
+
+
+    if(!el)
+        return;
+
+
+    el.textContent=text;
+
+    el.className =
+        "slideStatus " +
+        (
+            type
+            ? type
+            : ""
+        );
+
+}
+
+
+/* =====================================================
+   PROGRESS
+===================================================== */
+
+function updateProgress(
+    current,
+    total,
+    message
+){
+
+    const percentage =
+        Math.round(
+            (current / total) * 100
+        );
+
+
+    progressBar.style.width =
+        percentage + "%";
+
+
+    progressTitle.textContent =
+        `${percentage}%`;
+
+
+    statusText.textContent =
+        message;
+
+}
+
+
+/* =====================================================
+   ESCAPE HTML
+===================================================== */
+
+function escapeHTML(value){
+
+    return String(value)
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;")
+        .replaceAll('"',"&quot;")
+        .replaceAll("'","&#039;");
+
+}
+
 </script>
 
 </body>
