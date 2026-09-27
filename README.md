@@ -2,310 +2,162 @@
 <html lang="ar" dir="rtl">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>شمس ميثم | تجميل وليزر</title>
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+شمس ميثم | تجميل وليزر
+</title>
+
+
+<!-- PDF.JS -->
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.min.mjs"
+    type="module"
+></script>
+
 
 <style>
+
+/* =========================================================
+   SHAMS MAITHAM
+   COSMETIC & LASER
+========================================================= */
 
 *{
     box-sizing:border-box;
 }
 
 :root{
-    --pink:#e84b91;
-    --pink2:#ff77b6;
-    --purple:#7656d6;
-    --dark:#171321;
-    --card:#ffffff;
-    --bg:#fff7fb;
-    --text:#29222d;
-    --muted:#817681;
-    --border:#f0dce8;
-    --success:#32b67a;
-    --danger:#e74c67;
+
+    --pink:#e83f8f;
+
+    --pink-light:#fff0f7;
+
+    --pink-border:#f5c9df;
+
+    --purple:#7956d8;
+
+    --purple-light:#f0ebff;
+
+    --dark:#29212b;
+
+    --gray:#7c7180;
+
+    --white:#ffffff;
+
+    --background:#fff9fc;
+
+    --green:#2eae76;
+
+    --red:#df4662;
+
 }
 
+
+html{
+    scroll-behavior:smooth;
+}
+
+
 body{
+
     margin:0;
+
+    min-height:100vh;
+
     font-family:
+
         "Segoe UI",
         Tahoma,
         Arial,
         sans-serif;
 
-    background:
-        radial-gradient(circle at top right,#ffe1ef,transparent 35%),
-        radial-gradient(circle at bottom left,#e7ddff,transparent 35%),
-        var(--bg);
+    color:var(--dark);
 
-    color:var(--text);
+    background:
+
+        radial-gradient(
+            circle at 90% 0%,
+            #ffe1ef 0,
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 0% 90%,
+            #e9e0ff 0,
+            transparent 28%
+        ),
+
+        var(--background);
+
 }
 
-/* ================= HEADER ================= */
+
+/* =========================================================
+   HEADER
+========================================================= */
 
 .header{
+
     position:sticky;
+
     top:0;
-    z-index:100;
 
-    backdrop-filter:blur(18px);
-
-    background:rgba(255,255,255,.86);
-
-    border-bottom:1px solid var(--border);
-
-    padding:14px 20px;
+    z-index:1000;
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
     gap:20px;
+
+    padding:12px 22px;
+
+    background:
+        rgba(255,255,255,.88);
+
+    backdrop-filter:
+        blur(18px);
+
+    border-bottom:
+        1px solid var(--pink-border);
+
 }
+
 
 .brand{
+
     display:flex;
+
     align-items:center;
+
     gap:12px;
+
 }
+
 
 .logo{
+
     width:52px;
+
     height:52px;
 
-    border-radius:18px;
-
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
-    font-size:25px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #ff75b7,
-            #8a63df
-        );
-
-    color:white;
-
-    box-shadow:
-        0 8px 25px rgba(150,80,150,.25);
-}
-
-.brandText h1{
-    margin:0;
-    font-size:18px;
-}
-
-.brandText span{
-    font-size:12px;
-    color:var(--muted);
-}
-
-.userArea{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-
-.loginBtn{
-    border:0;
-
-    background:#16131b;
-    color:white;
-
-    padding:11px 18px;
-
-    border-radius:13px;
-
-    cursor:pointer;
-
-    font-weight:700;
-}
-
-.loginBtn:hover{
-    transform:translateY(-1px);
-}
-
-.userInfo{
-    display:none;
-    align-items:center;
-    gap:8px;
-
-    background:white;
-
-    border:1px solid var(--border);
-
-    padding:6px 10px;
-
-    border-radius:14px;
-}
-
-.avatar{
-    width:32px;
-    height:32px;
-
-    border-radius:50%;
-}
-
-/* ================= HERO ================= */
-
-.container{
-    width:min(1200px,94%);
-    margin:auto;
-}
-
-.hero{
-    padding:50px 0 30px;
-}
-
-.heroBox{
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255,255,255,.92),
-            rgba(255,238,248,.92)
-        );
-
-    border:1px solid var(--border);
-
-    border-radius:30px;
-
-    padding:38px;
-
-    box-shadow:
-        0 25px 70px rgba(110,70,110,.12);
-
-    position:relative;
-
-    overflow:hidden;
-}
-
-.heroBox::after{
-    content:"✦";
-
-    position:absolute;
-
-    font-size:180px;
-
-    left:-25px;
-    bottom:-80px;
-
-    color:rgba(232,75,145,.06);
-}
-
-.badge{
-    display:inline-flex;
-
-    background:#ffe4f1;
-
-    color:#b52b6b;
-
-    padding:8px 13px;
-
-    border-radius:100px;
-
-    font-size:13px;
-
-    font-weight:700;
-}
-
-.hero h2{
-    font-size:clamp(30px,5vw,52px);
-
-    margin:18px 0 10px;
-
-    line-height:1.1;
-
-    background:
-        linear-gradient(
-            90deg,
-            #d72c78,
-            #7656d6
-        );
-
-    -webkit-background-clip:text;
-    background-clip:text;
-
-    color:transparent;
-}
-
-.hero p{
-    max-width:700px;
-
-    color:var(--muted);
-
-    line-height:1.8;
-
-    margin:0;
-}
-
-/* ================= UPLOAD ================= */
-
-.uploadCard{
-    margin-top:25px;
-
-    background:white;
-
-    border:2px dashed #e8bfd5;
-
-    border-radius:24px;
-
-    padding:35px;
-
-    text-align:center;
-
-    cursor:pointer;
-
-    transition:.2s;
-}
-
-.uploadCard:hover{
-    border-color:var(--pink);
-
-    background:#fffafd;
-}
-
-.uploadIcon{
-    font-size:48px;
-}
-
-.uploadCard h3{
-    margin:10px 0 5px;
-}
-
-.uploadCard p{
-    color:var(--muted);
-
-    margin:0;
-}
-
-#pdfInput{
-    display:none;
-}
-
-/* ================= CONTROL ================= */
-
-.controls{
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:10px;
-
-    margin-top:20px;
-}
-
-button{
-    font-family:inherit;
-}
-
-.primary{
-    border:0;
+    border-radius:18px;
 
     background:
         linear-gradient(
@@ -316,89 +168,506 @@ button{
 
     color:white;
 
-    padding:13px 20px;
+    font-size:25px;
 
-    border-radius:14px;
+    box-shadow:
+        0 8px 25px
+        rgba(180,70,140,.22);
+
+}
+
+
+.brand-text h1{
+
+    margin:0;
+
+    font-size:18px;
+
+}
+
+
+.brand-text p{
+
+    margin:2px 0 0;
+
+    font-size:12px;
+
+    color:var(--gray);
+
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.login-button{
+
+    border:0;
+
+    padding:11px 17px;
+
+    border-radius:13px;
+
+    background:#18141c;
+
+    color:white;
 
     font-weight:800;
 
     cursor:pointer;
 
-    box-shadow:
-        0 10px 25px rgba(180,70,140,.2);
+    transition:.2s;
+
 }
 
-.secondary{
-    border:1px solid var(--border);
 
-    background:white;
+.login-button:hover{
 
-    color:var(--text);
+    transform:
+        translateY(-1px);
 
-    padding:13px 20px;
-
-    border-radius:14px;
-
-    font-weight:700;
-
-    cursor:pointer;
 }
 
-.danger{
-    border:0;
 
-    background:#ffe4e9;
+.user-box{
 
-    color:#bd3450;
-
-    padding:13px 20px;
-
-    border-radius:14px;
-
-    font-weight:700;
-
-    cursor:pointer;
-}
-
-button:disabled{
-    opacity:.45;
-    cursor:not-allowed;
-}
-
-/* ================= STATUS ================= */
-
-.statusBox{
     display:none;
 
-    margin-top:25px;
+    align-items:center;
+
+    gap:8px;
+
+    padding:6px 8px;
+
+    border-radius:15px;
 
     background:white;
 
-    border:1px solid var(--border);
+    border:
+        1px solid var(--pink-border);
 
-    border-radius:20px;
-
-    padding:20px;
 }
 
-.progress{
-    height:12px;
 
-    background:#f3e8f0;
+.avatar{
 
-    border-radius:100px;
+    width:34px;
+
+    height:34px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+
+.username{
+
+    font-size:13px;
+
+    font-weight:800;
+
+}
+
+
+.logout{
+
+    border:0;
+
+    background:#fff0f3;
+
+    color:#c33452;
+
+    padding:7px 10px;
+
+    border-radius:9px;
+
+    cursor:pointer;
+
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.container{
+
+    width:
+        min(1180px,94%);
+
+    margin:auto;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+    padding:
+        45px 0 25px;
+
+}
+
+
+.hero-card{
+
+    position:relative;
 
     overflow:hidden;
 
-    margin-top:12px;
+    padding:42px;
+
+    border-radius:30px;
+
+    border:
+        1px solid var(--pink-border);
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.96),
+            rgba(255,239,248,.95)
+        );
+
+    box-shadow:
+        0 25px 70px
+        rgba(100,50,100,.10);
+
 }
 
-.progressBar{
+
+.hero-card::after{
+
+    content:"✦";
+
+    position:absolute;
+
+    left:-30px;
+
+    bottom:-90px;
+
+    font-size:230px;
+
+    color:
+        rgba(232,63,143,.05);
+
+}
+
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:5px;
+
+    padding:
+        7px 12px;
+
+    border-radius:100px;
+
+    background:#ffe5f1;
+
+    color:#b72c6d;
+
+    font-size:12px;
+
+    font-weight:900;
+
+}
+
+
+.hero h2{
+
+    max-width:800px;
+
+    margin:
+        17px 0 10px;
+
+    font-size:
+        clamp(32px,5vw,55px);
+
+    line-height:1.08;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #d82e79,
+            #7655d6
+        );
+
+    color:transparent;
+
+    background-clip:text;
+
+    -webkit-background-clip:text;
+
+}
+
+
+.hero-description{
+
+    max-width:760px;
+
+    color:var(--gray);
+
+    line-height:1.9;
+
+    margin:0;
+
+}
+
+
+/* =========================================================
+   UPLOAD
+========================================================= */
+
+.upload{
+
+    margin-top:25px;
+
+    padding:35px 20px;
+
+    border:
+        2px dashed
+        var(--pink-border);
+
+    border-radius:23px;
+
+    background:
+        rgba(255,255,255,.7);
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+
+.upload:hover{
+
+    border-color:
+        var(--pink);
+
+    background:
+        #fffafd;
+
+}
+
+
+.upload-icon{
+
+    font-size:48px;
+
+}
+
+
+.upload h3{
+
+    margin:
+        8px 0 4px;
+
+}
+
+
+.upload p{
+
+    margin:0;
+
+    color:var(--gray);
+
+    font-size:13px;
+
+}
+
+
+#pdf{
+
+    display:none;
+
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.controls{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:18px;
+
+}
+
+
+button{
+
+    font-family:inherit;
+
+}
+
+
+.primary{
+
+    border:0;
+
+    padding:
+        13px 20px;
+
+    border-radius:14px;
+
+    color:white;
+
+    font-weight:900;
+
+    cursor:pointer;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--pink),
+            var(--purple)
+        );
+
+    box-shadow:
+        0 10px 25px
+        rgba(180,70,140,.18);
+
+}
+
+
+.secondary{
+
+    border:
+        1px solid var(--pink-border);
+
+    padding:
+        13px 20px;
+
+    border-radius:14px;
+
+    background:white;
+
+    color:var(--dark);
+
+    font-weight:800;
+
+    cursor:pointer;
+
+}
+
+
+.stop{
+
+    border:0;
+
+    padding:
+        13px 20px;
+
+    border-radius:14px;
+
+    background:#ffe8ed;
+
+    color:#c03350;
+
+    font-weight:900;
+
+    cursor:pointer;
+
+}
+
+
+button:disabled{
+
+    opacity:.45;
+
+    cursor:not-allowed;
+
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status{
+
+    display:none;
+
+    margin-top:22px;
+
+    padding:18px;
+
+    border:
+        1px solid var(--pink-border);
+
+    border-radius:18px;
+
+    background:white;
+
+}
+
+
+.status-title{
+
+    font-weight:900;
+
+}
+
+
+.status-text{
+
+    margin-top:7px;
+
+    font-size:13px;
+
+    color:var(--gray);
+
+}
+
+
+.progress{
+
+    height:11px;
+
+    margin-top:13px;
+
+    overflow:hidden;
+
+    border-radius:100px;
+
+    background:#f3e7ef;
+
+}
+
+
+.progress-bar{
+
     width:0%;
 
     height:100%;
 
+    border-radius:100px;
+
     background:
+
         linear-gradient(
             90deg,
             var(--pink),
@@ -406,41 +675,56 @@ button:disabled{
         );
 
     transition:.3s;
+
 }
 
-.statusText{
-    font-size:14px;
 
-    color:var(--muted);
+/* =========================================================
+   SLIDES
+========================================================= */
 
-    margin-top:10px;
-}
-
-/* ================= SLIDES ================= */
-
-#slides{
-    margin-top:35px;
+.slides{
 
     display:grid;
 
     gap:25px;
+
+    margin:
+        30px 0 60px;
+
 }
 
+
+.empty{
+
+    padding:60px 20px;
+
+    text-align:center;
+
+    color:var(--gray);
+
+}
+
+
 .slide{
-    background:white;
-
-    border:1px solid var(--border);
-
-    border-radius:25px;
 
     overflow:hidden;
 
+    border:
+        1px solid var(--pink-border);
+
+    border-radius:24px;
+
+    background:white;
+
     box-shadow:
-        0 12px 40px rgba(70,40,70,.07);
+        0 12px 40px
+        rgba(70,40,70,.06);
+
 }
 
-.slideHeader{
-    padding:17px 20px;
+
+.slide-header{
 
     display:flex;
 
@@ -448,102 +732,135 @@ button:disabled{
 
     align-items:center;
 
-    gap:10px;
+    padding:
+        15px 18px;
 
-    border-bottom:1px solid var(--border);
+    background:
+        #fffafd;
 
-    background:#fffafd;
+    border-bottom:
+        1px solid var(--pink-border);
+
 }
 
-.slideNumber{
-    font-weight:900;
 
-    color:#b62c6c;
+.slide-number{
+
+    font-weight:950;
+
+    color:#b72d6d;
+
 }
 
-.slideStatus{
-    font-size:12px;
 
-    padding:6px 10px;
+.slide-state{
+
+    padding:
+        6px 10px;
 
     border-radius:100px;
 
     background:#f5eef5;
 
-    color:var(--muted);
+    color:var(--gray);
+
+    font-size:11px;
+
+    font-weight:800;
+
 }
 
-.slideStatus.done{
-    background:#ddf8eb;
 
-    color:#188359;
+.slide-state.generating{
+
+    background:#fff0d8;
+
+    color:#9a6500;
+
 }
 
-.slideStatus.generating{
-    background:#fff0d9;
 
-    color:#a96700;
+.slide-state.done{
+
+    background:#def8ec;
+
+    color:#18835b;
+
 }
 
-.slideBody{
+
+.slide-content{
+
     padding:20px;
+
 }
 
-.columns{
+
+.two-columns{
+
     display:grid;
 
     grid-template-columns:
         1fr 1fr;
 
-    gap:20px;
+    gap:18px;
+
 }
 
-.panel{
-    background:#faf8fb;
 
-    border:1px solid var(--border);
+.panel{
+
+    overflow:hidden;
+
+    border:
+        1px solid var(--pink-border);
 
     border-radius:17px;
 
-    overflow:hidden;
+    background:#fcfafd;
+
 }
 
-.panelTitle{
-    padding:12px 15px;
 
-    font-weight:800;
+.panel-title{
 
-    background:#fff;
+    padding:
+        11px 14px;
 
-    border-bottom:1px solid var(--border);
-}
+    background:white;
 
-.panelContent{
-    padding:15px;
-
-    white-space:pre-wrap;
-
-    word-break:break-word;
-
-    line-height:1.7;
+    border-bottom:
+        1px solid var(--pink-border);
 
     font-size:13px;
 
-    max-height:300px;
+    font-weight:900;
 
-    overflow:auto;
 }
 
-.imageArea{
-    margin-top:20px;
 
-    border-radius:20px;
+.panel-text{
 
-    background:#faf8fb;
+    max-height:330px;
 
-    border:1px solid var(--border);
+    overflow:auto;
 
-    min-height:180px;
+    padding:14px;
+
+    white-space:pre-wrap;
+
+    line-height:1.75;
+
+    font-size:13px;
+
+    direction:auto;
+
+}
+
+
+.image-box{
+
+    min-height:220px;
 
     display:flex;
 
@@ -551,98 +868,148 @@ button:disabled{
 
     justify-content:center;
 
+    margin-top:18px;
+
     overflow:hidden;
+
+    border:
+        1px solid var(--pink-border);
+
+    border-radius:20px;
+
+    background:#faf8fb;
+
 }
 
-.imageArea img{
+
+.image-box img{
+
     width:100%;
 
+    height:auto;
+
     display:block;
+
 }
+
 
 .placeholder{
+
+    padding:40px;
+
     text-align:center;
 
-    color:var(--muted);
+    color:var(--gray);
 
-    padding:35px;
 }
 
-.slideActions{
-    display:flex;
 
-    gap:10px;
+.slide-buttons{
+
+    display:flex;
 
     flex-wrap:wrap;
 
+    gap:9px;
+
     margin-top:15px;
+
 }
 
-/* ================= EMPTY ================= */
 
-.empty{
-    text-align:center;
-
-    color:var(--muted);
-
-    padding:50px 20px;
-}
-
-/* ================= FOOTER ================= */
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer{
+
+    padding:
+        35px 20px;
+
     text-align:center;
 
-    color:var(--muted);
+    color:var(--gray);
 
-    padding:40px 20px;
+    font-size:12px;
 
-    font-size:13px;
 }
 
-/* ================= MOBILE ================= */
 
-@media(max-width:750px){
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:760px){
 
     .header{
-        padding:10px 12px;
+
+        padding:
+            10px 12px;
+
     }
 
-    .brandText h1{
+
+    .brand-text h1{
+
         font-size:15px;
+
     }
 
-    .hero{
-        padding-top:25px;
+
+    .brand-text p{
+
+        font-size:10px;
+
     }
 
-    .heroBox{
-        padding:25px 20px;
+
+    .hero-card{
+
+        padding:
+            25px 18px;
+
     }
 
-    .columns{
+
+    .two-columns{
+
         grid-template-columns:1fr;
+
     }
 
-    .uploadCard{
-        padding:25px 15px;
-    }
 
-    .userInfo span{
+    .username{
+
         display:none;
+
+    }
+
+
+    .login-button{
+
+        padding:
+            9px 11px;
+
+        font-size:11px;
+
     }
 
 }
 
 </style>
+
 </head>
 
 
 <body>
 
-<!-- ================= HEADER ================= -->
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header class="header">
+
 
     <div class="brand">
 
@@ -650,34 +1017,34 @@ footer{
             ✨
         </div>
 
-        <div class="brandText">
+        <div class="brand-text">
 
             <h1>
                 شمس ميثم
             </h1>
 
-            <span>
-                تجميل وليزر • منصة تعليمية
-            </span>
+            <p>
+                تجميل وليزر
+            </p>
 
         </div>
 
     </div>
 
 
-    <div class="userArea">
+    <div>
 
         <button
-            id="loginBtn"
-            class="loginBtn"
+            id="loginButton"
+            class="login-button"
         >
             🤗 تسجيل الدخول بـ Hugging Face
         </button>
 
 
         <div
-            id="userInfo"
-            class="userInfo"
+            id="userBox"
+            class="user-box"
         >
 
             <img
@@ -687,12 +1054,15 @@ footer{
                 alt=""
             >
 
-            <span id="username"></span>
+            <span
+                id="username"
+                class="username"
+            >
+            </span>
 
             <button
-                id="logoutBtn"
-                class="secondary"
-                style="padding:7px 10px;"
+                id="logoutButton"
+                class="logout"
             >
                 خروج
             </button>
@@ -701,141 +1071,186 @@ footer{
 
     </div>
 
+
 </header>
 
 
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
 <main class="container">
 
-<!-- ================= HERO ================= -->
 
 <section class="hero">
 
-    <div class="heroBox">
 
-        <div class="badge">
-            ✨ AI Study Studio
+<div class="hero-card">
+
+
+    <span class="badge">
+        ✨ SHAMS MAITHAM AI STUDY STUDIO
+    </span>
+
+
+    <h2>
+        حوّلي محاضرتچ إلى
+        صور تعليمية ✨
+    </h2>
+
+
+    <p class="hero-description">
+
+        ارفعي محاضرة الـPDF،
+        والموقع يقرأها من أول صفحة
+        إلى آخر صفحة.
+        لكل صفحة Prompt مستقل،
+        وبعدها يتم توليد صورة تعليمية
+        خاصة بيها.
+
+    </p>
+
+
+    <!-- UPLOAD -->
+
+    <label
+        for="pdf"
+        class="upload"
+    >
+
+        <div class="upload-icon">
+            📚
         </div>
 
-        <h2>
-            محاضرتچ تتحول إلى
-            صور تعليمية
-        </h2>
+        <h3>
+            اختاري ملف المحاضرة
+        </h3>
 
         <p>
-            ارفعي محاضرة الـPDF، والموقع يقرأها من أول صفحة
-            إلى آخر صفحة، ويصنع لكل سلايد Prompt خاص بيه
-            ثم يولد صورة تعليمية منفصلة.
+            PDF فقط
         </p>
 
+    </label>
 
-        <!-- UPLOAD -->
 
-        <label
-            class="uploadCard"
-            for="pdfInput"
+    <input
+        id="pdf"
+        type="file"
+        accept="application/pdf"
+    >
+
+
+    <!-- CONTROLS -->
+
+    <div class="controls">
+
+
+        <button
+            id="readButton"
+            class="primary"
+            disabled
+        >
+            📖 قراءة المحاضرة
+        </button>
+
+
+        <button
+            id="generateButton"
+            class="primary"
+            disabled
+        >
+            ✨ توليد كل الصور
+        </button>
+
+
+        <button
+            id="stopButton"
+            class="stop"
+            disabled
+        >
+            ⏹ إيقاف
+        </button>
+
+
+        <button
+            id="clearButton"
+            class="secondary"
+        >
+            🗑️ مسح
+        </button>
+
+
+    </div>
+
+
+    <!-- STATUS -->
+
+    <div
+        id="status"
+        class="status"
+    >
+
+        <div
+            id="statusTitle"
+            class="status-title"
+        >
+            جاهز
+        </div>
+
+
+        <div
+            id="progress"
+            class="progress"
         >
 
-            <div class="uploadIcon">
-                📚
+            <div
+                id="progressBar"
+                class="progress-bar"
+            >
             </div>
-
-            <h3>
-                اختاري محاضرة PDF
-            </h3>
-
-            <p>
-                اضغطي هنا لاختيار ملف المحاضرة
-            </p>
-
-        </label>
-
-
-        <input
-            id="pdfInput"
-            type="file"
-            accept="application/pdf"
-        >
-
-
-        <!-- CONTROLS -->
-
-        <div class="controls">
-
-            <button
-                id="processBtn"
-                class="primary"
-                disabled
-            >
-                🔍 قراءة المحاضرة
-            </button>
-
-            <button
-                id="generateBtn"
-                class="primary"
-                disabled
-            >
-                ✨ توليد كل الصور
-            </button>
-
-            <button
-                id="stopBtn"
-                class="danger"
-                disabled
-            >
-                ⏹ إيقاف
-            </button>
 
         </div>
 
 
-        <!-- STATUS -->
-
         <div
-            id="statusBox"
-            class="statusBox"
+            id="statusText"
+            class="status-text"
         >
-
-            <b id="progressTitle">
-                جاهز
-            </b>
-
-            <div class="progress">
-
-                <div
-                    id="progressBar"
-                    class="progressBar"
-                ></div>
-
-            </div>
-
-            <div
-                id="statusText"
-                class="statusText"
-            >
-                -
-            </div>
-
+            -
         </div>
 
     </div>
 
+
+</div>
+
+
 </section>
 
 
-<!-- ================= SLIDES ================= -->
+<!-- =====================================================
+     SLIDES
+===================================================== -->
 
-<section id="slides">
+<section
+    id="slides"
+    class="slides"
+>
+
 
     <div class="empty">
 
         📚
+
         <br><br>
 
-        اختاري محاضرة حتى تظهر السلايدات هنا
+        ارفعي محاضرة حتى تظهر السلايدات هنا
 
     </div>
 
+
 </section>
+
 
 </main>
 
@@ -843,161 +1258,338 @@ footer{
 <footer>
 
     ✨ شمس ميثم — تجميل وليزر
-    <br>
-    Educational AI Studio
+
+    <br><br>
+
+    AI Educational Studio
 
 </footer>
 
 
-<!-- PDF.JS -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.min.mjs"
-type="module"></script>
-
-
-<!-- ================= APP ================= -->
+<!-- =====================================================
+     APPLICATION
+===================================================== -->
 
 <script type="module">
 
+
 /* =====================================================
    HUGGING FACE OAUTH
+   OFFICIAL HF METHOD
 ===================================================== */
 
 import {
+
     oauthLoginUrl,
+
     oauthHandleRedirectIfPresent
+
 }
-from "https://cdn.jsdelivr.net/npm/@huggingface/hub@0.18.0/+esm";
+
+from
+"https://cdn.jsdelivr.net/npm/@huggingface/hub/+esm";
 
 
-let hfUser = null;
-let hfToken = null;
+
+let hfAuth = null;
 
 
-/* LOGIN */
+
+/* =====================================================
+   GET LOGIN BUTTON
+===================================================== */
+
+const loginButton =
+    document.getElementById(
+        "loginButton"
+    );
+
+
+const userBox =
+    document.getElementById(
+        "userBox"
+    );
+
+
+const username =
+    document.getElementById(
+        "username"
+    );
+
+
+const avatar =
+    document.getElementById(
+        "avatar"
+    );
+
+
+const logoutButton =
+    document.getElementById(
+        "logoutButton"
+    );
+
+
+
+/* =====================================================
+   SHOW LOGGED USER
+===================================================== */
+
+function showLoggedUser(){
+
+    if(!hfAuth)
+        return;
+
+
+    loginButton.style.display =
+        "none";
+
+
+    userBox.style.display =
+        "flex";
+
+
+    const user =
+        hfAuth.userInfo;
+
+
+    username.textContent =
+
+        user?.preferred_username ||
+
+        user?.name ||
+
+        "Hugging Face";
+
+
+    if(user?.picture){
+
+        avatar.src =
+            user.picture;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   SHOW LOGOUT
+===================================================== */
+
+function showLoggedOut(){
+
+    loginButton.style.display =
+        "block";
+
+
+    userBox.style.display =
+        "none";
+
+}
+
+
+
+/* =====================================================
+   INITIALIZE HF
+===================================================== */
 
 async function initializeHF(){
 
     try{
 
+
+        /*
+         * Hugging Face official function
+         *
+         * إذا رجعنا من OAuth:
+         * ترجع معلومات المستخدم + token
+         */
+
         const result =
+
             await oauthHandleRedirectIfPresent();
+
 
         if(result){
 
-            hfUser =
-                result.userInfo;
+            hfAuth =
+                result;
 
-            hfToken =
-                result.accessToken;
 
-            showUser();
+            /*
+             * نخزن الجلسة مؤقتاً
+             */
+
+            sessionStorage.setItem(
+
+                "shams_hf_auth",
+
+                JSON.stringify(result)
+
+            );
+
+
+            showLoggedUser();
+
+
+            console.log(
+                "HF LOGIN:",
+                result
+            );
+
 
             return;
+
         }
+
+
+        /*
+         * إذا الصفحة انفتحت بدون callback
+         * نحاول استعادة الجلسة
+         */
+
+        const saved =
+
+            sessionStorage.getItem(
+                "shams_hf_auth"
+            );
+
+
+        if(saved){
+
+            try{
+
+                hfAuth =
+                    JSON.parse(saved);
+
+                showLoggedUser();
+
+                return;
+
+            }catch(error){
+
+                sessionStorage.removeItem(
+                    "shams_hf_auth"
+                );
+
+            }
+
+        }
+
+
+        showLoggedOut();
+
 
     }catch(error){
 
         console.error(
-            "OAuth redirect error:",
+            "HF OAuth initialization error:",
             error
         );
+
+
+        showLoggedOut();
 
     }
 
 }
 
 
-/* LOGIN BUTTON */
 
-document
-.getElementById("loginBtn")
-.addEventListener(
+/* =====================================================
+   LOGIN
+===================================================== */
+
+loginButton.addEventListener(
+
     "click",
+
     async ()=>{
 
         try{
 
+
+            /*
+             * الرسمي في Static Space:
+             *
+             * لا نضع Client ID يدوياً.
+             *
+             * Hugging Face يقرأه من
+             * Space config لأن README
+             * يحتوي hf_oauth: true.
+             */
+
             const url =
+
                 await oauthLoginUrl();
+
+
+            /*
+             * فتح صفحة OAuth
+             */
 
             window.location.href =
                 url;
 
+
         }catch(error){
 
-            alert(
-                "تعذر فتح تسجيل الدخول بـ Hugging Face"
+            console.error(
+                "HF LOGIN ERROR:",
+                error
             );
 
-            console.error(error);
+
+            alert(
+
+                "ما قدر الموقع يفتح تسجيل الدخول.\n\n" +
+
+                error.message
+
+            );
 
         }
 
     }
+
 );
 
 
-/* SHOW USER */
 
-function showUser(){
+/* =====================================================
+   LOGOUT
+===================================================== */
 
-    if(!hfUser)
-        return;
+logoutButton.addEventListener(
 
-
-    document
-    .getElementById("loginBtn")
-    .style.display="none";
-
-
-    document
-    .getElementById("userInfo")
-    .style.display="flex";
-
-
-    document
-    .getElementById("username")
-    .textContent =
-        hfUser.preferred_username ||
-        hfUser.name ||
-        "Hugging Face User";
-
-
-    if(hfUser.picture){
-
-        document
-        .getElementById("avatar")
-        .src =
-            hfUser.picture;
-
-    }
-
-}
-
-
-/* LOGOUT */
-
-document
-.getElementById("logoutBtn")
-.addEventListener(
     "click",
+
     ()=>{
 
-        hfUser=null;
-        hfToken=null;
+        hfAuth =
+            null;
 
-        localStorage.clear();
+
+        sessionStorage.removeItem(
+            "shams_hf_auth"
+        );
+
 
         location.reload();
 
     }
+
 );
 
 
-/* START AUTH */
+
+/* =====================================================
+   START HF
+===================================================== */
 
 await initializeHF();
+
 
 
 /* =====================================================
@@ -1005,15 +1597,20 @@ await initializeHF();
 ===================================================== */
 
 const pdfjsLib =
+
     await import(
+
         "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.min.mjs"
+
     );
 
 
 pdfjsLib
 .GlobalWorkerOptions
 .workerSrc =
-"https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.min.mjs";
+
+    "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.min.mjs";
+
 
 
 /* =====================================================
@@ -1021,38 +1618,81 @@ pdfjsLib
 ===================================================== */
 
 const pdfInput =
-    document.getElementById("pdfInput");
+    document.getElementById(
+        "pdf"
+    );
 
-const processBtn =
-    document.getElementById("processBtn");
 
-const generateBtn =
-    document.getElementById("generateBtn");
+const readButton =
+    document.getElementById(
+        "readButton"
+    );
 
-const stopBtn =
-    document.getElementById("stopBtn");
 
-const slidesContainer =
-    document.getElementById("slides");
+const generateButton =
+    document.getElementById(
+        "generateButton"
+    );
 
-const statusBox =
-    document.getElementById("statusBox");
 
-const progressBar =
-    document.getElementById("progressBar");
+const stopButton =
+    document.getElementById(
+        "stopButton"
+    );
 
-const progressTitle =
-    document.getElementById("progressTitle");
+
+const clearButton =
+    document.getElementById(
+        "clearButton"
+    );
+
+
+const slidesElement =
+    document.getElementById(
+        "slides"
+    );
+
+
+const status =
+    document.getElementById(
+        "status"
+    );
+
+
+const statusTitle =
+    document.getElementById(
+        "statusTitle"
+    );
+
 
 const statusText =
-    document.getElementById("statusText");
+    document.getElementById(
+        "statusText"
+    );
 
 
-let selectedFile = null;
+const progressBar =
+    document.getElementById(
+        "progressBar"
+    );
 
-let slides = [];
 
-let stopRequested = false;
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+let selectedPDF =
+    null;
+
+
+let slides =
+    [];
+
+
+let stopRequested =
+    false;
+
 
 
 /* =====================================================
@@ -1064,91 +1704,109 @@ const FIXED_PROMPT =
 "Make a diagram showing the following write and draw every detail (dont skip any word & dont add any word) use alot of drawings & illustrations (white background)";
 
 
+
 /* =====================================================
-   FILE SELECT
+   SELECT PDF
 ===================================================== */
 
 pdfInput.addEventListener(
+
     "change",
+
     ()=>{
 
-        selectedFile =
+        selectedPDF =
             pdfInput.files[0];
 
-        if(!selectedFile)
+
+        if(!selectedPDF)
             return;
 
 
-        processBtn.disabled=false;
-
-        generateBtn.disabled=true;
-
-        slides=[];
-
-        slidesContainer.innerHTML="";
+        readButton.disabled =
+            false;
 
 
-        showStatus(
-            "تم اختيار المحاضرة",
-            selectedFile.name
+        generateButton.disabled =
+            true;
+
+
+        slides = [];
+
+
+        slidesElement.innerHTML =
+
+            `<div class="empty">
+                📄 تم اختيار:
+                <br><br>
+                <b>${escapeHTML(selectedPDF.name)}</b>
+                <br><br>
+                اضغطي "قراءة المحاضرة"
+            </div>`;
+
+
+        setStatus(
+
+            "تم اختيار الملف",
+
+            selectedPDF.name,
+
+            0
+
         );
 
     }
+
 );
 
-
-/* =====================================================
-   STATUS
-===================================================== */
-
-function showStatus(
-    title,
-    text
-){
-
-    statusBox.style.display="block";
-
-    progressTitle.textContent =
-        title;
-
-    statusText.textContent =
-        text;
-
-}
 
 
 /* =====================================================
    READ PDF
 ===================================================== */
 
-processBtn.addEventListener(
+readButton.addEventListener(
+
     "click",
+
     async ()=>{
 
-        if(!selectedFile)
+        if(!selectedPDF)
             return;
 
 
-        processBtn.disabled=true;
-
-        slides=[];
-
-        slidesContainer.innerHTML="";
+        readButton.disabled =
+            true;
 
 
-        showStatus(
-            "جاري قراءة المحاضرة",
-            "انتظري... يتم استخراج كل صفحة"
-        );
+        generateButton.disabled =
+            true;
+
+
+        slides = [];
 
 
         try{
 
+
+            setStatus(
+
+                "جاري قراءة المحاضرة",
+
+                "يتم استخراج كل الصفحات...",
+
+                0
+
+            );
+
+
             const buffer =
-                await selectedFile.arrayBuffer();
+
+                await selectedPDF.arrayBuffer();
 
 
             const pdf =
+
                 await pdfjsLib
                 .getDocument({
                     data:buffer
@@ -1160,35 +1818,62 @@ processBtn.addEventListener(
                 pdf.numPages;
 
 
+            /*
+             * نقرأ كل صفحة
+             */
+
             for(
-                let pageNumber=1;
-                pageNumber<=total;
+
+                let pageNumber = 1;
+
+                pageNumber <= total;
+
                 pageNumber++
+
             ){
 
+
                 const page =
-                    await pdf
-                    .getPage(pageNumber);
+
+                    await pdf.getPage(
+                        pageNumber
+                    );
 
 
                 const content =
+
                     await page
                     .getTextContent();
 
 
-                const text =
+                /*
+                 * النص الأصلي
+                 */
+
+                const originalText =
+
                     content.items
+
                     .map(
                         item =>
                             item.str
                     )
+
                     .join(" ")
+
                     .trim();
 
 
+                /*
+                 * Prompt خاص بالسلايد
+                 */
+
                 const prompt =
-                    text +
+
+                    originalText +
+
                     "\n\n" +
+
                     FIXED_PROMPT;
 
 
@@ -1198,7 +1883,7 @@ processBtn.addEventListener(
                         pageNumber,
 
                     text:
-                        text,
+                        originalText,
 
                     prompt:
                         prompt,
@@ -1206,16 +1891,20 @@ processBtn.addEventListener(
                     image:
                         null,
 
-                    status:
+                    state:
                         "waiting"
 
                 });
 
 
                 updateProgress(
+
                     pageNumber,
+
                     total,
-                    `قراءة السلايد ${pageNumber} من ${total}`
+
+                    `قراءة الصفحة ${pageNumber} من ${total}`
+
                 );
 
             }
@@ -1224,13 +1913,18 @@ processBtn.addEventListener(
             renderSlides();
 
 
-            generateBtn.disabled =
-                slides.length===0;
+            generateButton.disabled =
+                slides.length === 0;
 
 
-            showStatus(
-                "تمت قراءة المحاضرة",
-                `${slides.length} سلايد جاهز للتوليد`
+            setStatus(
+
+                "تمت القراءة ✨",
+
+                `تم العثور على ${slides.length} صفحة. لا توجد عملية اختصار.`,
+
+                100
+
             );
 
 
@@ -1238,34 +1932,43 @@ processBtn.addEventListener(
 
             console.error(error);
 
-            showStatus(
-                "حدث خطأ",
-                error.message
-            );
 
+            setStatus(
+
+                "حدث خطأ",
+
+                error.message,
+
+                0
+
+            );
 
         }finally{
 
-            processBtn.disabled=false;
+            readButton.disabled =
+                false;
 
         }
 
     }
+
 );
 
 
+
 /* =====================================================
-   RENDER SLIDES
+   RENDER ALL SLIDES
 ===================================================== */
 
 function renderSlides(){
 
-    slidesContainer.innerHTML="";
+    slidesElement.innerHTML = "";
 
 
-    if(slides.length===0){
+    if(!slides.length){
 
-        slidesContainer.innerHTML =
+        slidesElement.innerHTML =
+
             `<div class="empty">
                 لا توجد صفحات
             </div>`;
@@ -1276,50 +1979,66 @@ function renderSlides(){
 
 
     slides.forEach(
+
         slide=>{
 
-            const el =
-                document
-                .createElement("article");
+
+            const article =
+
+                document.createElement(
+                    "article"
+                );
 
 
-            el.className="slide";
+            article.className =
+                "slide";
 
 
-            el.id =
+            article.id =
                 `slide-${slide.number}`;
 
 
-            el.innerHTML = `
+            article.innerHTML = `
 
-                <div class="slideHeader">
+                <div class="slide-header">
 
-                    <div class="slideNumber">
-                        سلايد ${slide.number}
+                    <div class="slide-number">
+
+                        📄 الصفحة
+                        ${slide.number}
+
                     </div>
 
                     <div
-                        class="slideStatus"
-                        id="status-${slide.number}"
+                        id="state-${slide.number}"
+                        class="slide-state"
                     >
+
                         بانتظار التوليد
+
                     </div>
 
                 </div>
 
 
-                <div class="slideBody">
+                <div class="slide-content">
 
-                    <div class="columns">
+
+                    <div class="two-columns">
+
 
                         <div class="panel">
 
-                            <div class="panelTitle">
+                            <div class="panel-title">
+
                                 📖 النص الأصلي
+
                             </div>
 
-                            <div class="panelContent">
+                            <div class="panel-text">
+
                                 ${escapeHTML(slide.text)}
+
                             </div>
 
                         </div>
@@ -1327,80 +2046,156 @@ function renderSlides(){
 
                         <div class="panel">
 
-                            <div class="panelTitle">
-                                ✨ Prompt الخاص بالسلايد
+                            <div class="panel-title">
+
+                                ✨ Prompt هذا السلايد
+
                             </div>
 
-                            <div class="panelContent">
+                            <div class="panel-text">
+
                                 ${escapeHTML(slide.prompt)}
+
                             </div>
 
                         </div>
+
 
                     </div>
 
 
                     <div
-                        class="imageArea"
                         id="image-${slide.number}"
+                        class="image-box"
                     >
 
                         <div class="placeholder">
+
                             🖼️
+
                             <br><br>
-                            الصورة التعليمية ستظهر هنا
+
+                            لم يتم توليد الصورة بعد
+
                         </div>
 
                     </div>
 
 
-                    <div class="slideActions">
+                    <div class="slide-buttons">
+
 
                         <button
                             class="primary"
-                            onclick="generateSingle(${slide.number})"
+                            data-slide="${slide.number}"
                         >
+
                             ✨ توليد هذا السلايد
+
                         </button>
+
 
                     </div>
 
+
                 </div>
+
             `;
 
 
-            slidesContainer.appendChild(el);
+            slidesElement.appendChild(
+                article
+            );
+
+
+            const button =
+
+                article.querySelector(
+                    "button"
+                );
+
+
+            button.addEventListener(
+
+                "click",
+
+                ()=>{
+
+                    generateSingleSlide(
+                        slide.number
+                    );
+
+                }
+
+            );
 
         }
+
     );
 
 }
+
 
 
 /* =====================================================
    GENERATE ALL
 ===================================================== */
 
-generateBtn.addEventListener(
+generateButton.addEventListener(
+
     "click",
+
     async ()=>{
 
-        if(slides.length===0)
+
+        /*
+         * لازم المستخدم يكون داخل
+         */
+
+        if(!hfAuth){
+
+            alert(
+                "سجلي دخول Hugging Face أولاً."
+            );
+
+            return;
+
+        }
+
+
+        if(!slides.length)
             return;
 
 
-        stopRequested=false;
+        stopRequested =
+            false;
 
-        stopBtn.disabled=false;
 
-        generateBtn.disabled=true;
+        stopButton.disabled =
+            false;
 
+
+        generateButton.disabled =
+            true;
+
+
+        /*
+         * نبدأ من أول سلايد
+         *
+         * إذا كان عنده صورة
+         * نتخطاه.
+         */
 
         for(
-            let i=0;
-            i<slides.length;
+
+            let i = 0;
+
+            i < slides.length;
+
             i++
+
         ){
+
 
             if(stopRequested)
                 break;
@@ -1410,7 +2205,9 @@ generateBtn.addEventListener(
                 slides[i];
 
 
-            /* already generated */
+            /*
+             * استكمال
+             */
 
             if(slide.image)
                 continue;
@@ -1422,65 +2219,105 @@ generateBtn.addEventListener(
 
 
             updateProgress(
-                i+1,
+
+                i + 1,
+
                 slides.length,
-                `توليد السلايد ${i+1} من ${slides.length}`
+
+                `توليد الصفحة ${i+1} من ${slides.length}`
+
             );
 
         }
 
 
-        stopBtn.disabled=true;
+        stopButton.disabled =
+            true;
 
-        generateBtn.disabled=false;
+
+        generateButton.disabled =
+            false;
 
 
         if(stopRequested){
 
-            showStatus(
-                "تم الإيقاف",
-                "يمكن الضغط على توليد كل الصور للمتابعة"
+            setStatus(
+
+                "تم الإيقاف ⏹",
+
+                "تقدرين تضغطين توليد مرة ثانية حتى يكمل من حيث توقف.",
+
+                getCompletedPercent()
+
             );
 
         }else{
 
-            showStatus(
-                "اكتمل التوليد ✨",
-                `تمت معالجة ${slides.length} سلايد`
+            setStatus(
+
+                "اكتملت المحاضرة ✨",
+
+                `تمت معالجة ${slides.length} صفحة.`,
+
+                100
+
             );
 
         }
 
     }
+
 );
+
 
 
 /* =====================================================
    STOP
 ===================================================== */
 
-stopBtn.addEventListener(
+stopButton.addEventListener(
+
     "click",
+
     ()=>{
 
-        stopRequested=true;
+        stopRequested =
+            true;
 
-        stopBtn.disabled=true;
+
+        stopButton.disabled =
+            true;
 
     }
+
 );
 
 
+
 /* =====================================================
-   SINGLE
+   GENERATE SINGLE
 ===================================================== */
 
-window.generateSingle =
-async function(number){
+async function generateSingleSlide(
+    number
+){
+
+    if(!hfAuth){
+
+        alert(
+            "سجلي دخول Hugging Face أولاً."
+        );
+
+        return;
+
+    }
+
 
     const slide =
+
         slides.find(
-            s=>s.number===number
+            s =>
+                s.number === number
         );
 
 
@@ -1492,51 +2329,71 @@ async function(number){
         slide
     );
 
-};
+}
+
 
 
 /* =====================================================
-   GENERATE SLIDE
+   GENERATE IMAGE
 ===================================================== */
 
-async function generateSlide(slide){
+async function generateSlide(
+    slide
+){
 
-    setSlideStatus(
+    setSlideState(
+
         slide.number,
+
         "generating",
+
         "جاري التوليد..."
+
     );
 
 
     try{
 
-        /*
-          هنا نستخدم Hugging Face Inference API
-          مع تسجيل الدخول.
-        */
 
-        if(!hfToken){
+        /*
+         * Access token من OAuth
+         */
+
+        const token =
+            hfAuth.accessToken;
+
+
+        if(!token){
 
             throw new Error(
-                "يجب تسجيل الدخول إلى Hugging Face أولاً."
+                "لم يتم الحصول على Hugging Face access token."
             );
 
         }
 
 
+        /*
+         * Hugging Face Inference Router
+         */
+
         const response =
+
             await fetch(
+
                 "https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-schnell",
+
                 {
 
                     method:"POST",
 
                     headers:{
+
                         "Authorization":
-                            `Bearer ${hfToken}`,
+                            `Bearer ${token}`,
 
                         "Content-Type":
                             "application/json"
+
                     },
 
                     body:
@@ -1548,16 +2405,20 @@ async function generateSlide(slide){
                         })
 
                 }
+
             );
 
 
         if(!response.ok){
 
-            const message =
+            const errorText =
                 await response.text();
 
+
             throw new Error(
-                `Hugging Face error ${response.status}: ${message}`
+
+                `Hugging Face ${response.status}: ${errorText}`
+
             );
 
         }
@@ -1568,49 +2429,67 @@ async function generateSlide(slide){
 
 
         const imageURL =
-            URL.createObjectURL(blob);
+            URL.createObjectURL(
+                blob
+            );
 
 
         slide.image =
             imageURL;
 
 
-        slide.status =
+        slide.state =
             "done";
 
 
         showImage(
+
             slide.number,
+
             imageURL
+
         );
 
 
-        setSlideStatus(
+        setSlideState(
+
             slide.number,
+
             "done",
+
             "تم التوليد ✓"
+
         );
 
 
     }catch(error){
 
-        console.error(error);
-
-
-        setSlideStatus(
-            slide.number,
-            "",
-            "فشل التوليد"
+        console.error(
+            error
         );
 
 
-        const area =
+        setSlideState(
+
+            slide.number,
+
+            "",
+
+            "فشل التوليد"
+
+        );
+
+
+        const imageBox =
+
             document.getElementById(
+
                 `image-${slide.number}`
+
             );
 
 
-        area.innerHTML = `
+        imageBox.innerHTML = `
 
             <div class="placeholder">
 
@@ -1629,70 +2508,125 @@ async function generateSlide(slide){
 }
 
 
+
 /* =====================================================
    SHOW IMAGE
 ===================================================== */
 
 function showImage(
+
     number,
+
     url
+
 ){
 
-    const area =
+    const box =
+
         document.getElementById(
+
             `image-${number}`
+
         );
 
 
-    area.innerHTML="";
+    box.innerHTML = "";
 
 
-    const img =
-        document.createElement("img");
+    const image =
+        document.createElement(
+            "img"
+        );
 
 
-    img.src=url;
-
-    img.alt=
-        `Educational slide ${number}`;
+    image.src =
+        url;
 
 
-    area.appendChild(img);
+    image.alt =
+        `Shams Maitham educational slide ${number}`;
+
+
+    box.appendChild(
+        image
+    );
 
 }
+
 
 
 /* =====================================================
-   STATUS PER SLIDE
+   SLIDE STATE
 ===================================================== */
 
-function setSlideStatus(
+function setSlideState(
+
     number,
+
     type,
+
     text
+
 ){
 
-    const el =
+    const state =
+
         document.getElementById(
-            `status-${number}`
+
+            `state-${number}`
+
         );
 
 
-    if(!el)
+    if(!state)
         return;
 
 
-    el.textContent=text;
+    state.textContent =
+        text;
 
-    el.className =
-        "slideStatus " +
+
+    state.className =
+        "slide-state " +
         (
-            type
-            ? type
-            : ""
+            type || ""
         );
 
 }
+
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+function setStatus(
+
+    title,
+
+    text,
+
+    percent
+
+){
+
+    status.style.display =
+        "block";
+
+
+    statusTitle.textContent =
+        title;
+
+
+    statusText.textContent =
+        text;
+
+
+    progressBar.style.width =
+        `${percent}%`;
+
+}
+
 
 
 /* =====================================================
@@ -1700,47 +2634,170 @@ function setSlideStatus(
 ===================================================== */
 
 function updateProgress(
+
     current,
+
     total,
-    message
+
+    text
+
 ){
 
-    const percentage =
+    const percent =
+
         Math.round(
-            (current / total) * 100
+
+            current /
+            total *
+            100
+
         );
 
 
-    progressBar.style.width =
-        percentage + "%";
+    setStatus(
 
+        `${percent}%`,
 
-    progressTitle.textContent =
-        `${percentage}%`;
+        text,
 
+        percent
 
-    statusText.textContent =
-        message;
+    );
 
 }
+
+
+
+/* =====================================================
+   COMPLETED %
+===================================================== */
+
+function getCompletedPercent(){
+
+    if(!slides.length)
+        return 0;
+
+
+    const completed =
+
+        slides.filter(
+            slide =>
+                slide.image
+        ).length;
+
+
+    return Math.round(
+
+        completed /
+        slides.length *
+        100
+
+    );
+
+}
+
+
+
+/* =====================================================
+   CLEAR
+===================================================== */
+
+clearButton.addEventListener(
+
+    "click",
+
+    ()=>{
+
+        selectedPDF =
+            null;
+
+
+        slides =
+            [];
+
+
+        pdfInput.value =
+            "";
+
+
+        readButton.disabled =
+            true;
+
+
+        generateButton.disabled =
+            true;
+
+
+        stopButton.disabled =
+            true;
+
+
+        slidesElement.innerHTML =
+
+            `<div class="empty">
+
+                📚
+
+                <br><br>
+
+                ارفعي محاضرة حتى تظهر السلايدات هنا
+
+            </div>`;
+
+
+        status.style.display =
+            "none";
+
+
+        progressBar.style.width =
+            "0%";
+
+    }
+
+);
+
 
 
 /* =====================================================
    ESCAPE HTML
 ===================================================== */
 
-function escapeHTML(value){
+function escapeHTML(
+    value
+){
 
     return String(value)
-        .replaceAll("&","&amp;")
-        .replaceAll("<","&lt;")
-        .replaceAll(">","&gt;")
-        .replaceAll('"',"&quot;")
-        .replaceAll("'","&#039;");
+
+        .replaceAll(
+            "&",
+            "&amp;"
+        )
+
+        .replaceAll(
+            "<",
+            "&lt;"
+        )
+
+        .replaceAll(
+            ">",
+            "&gt;"
+        )
+
+        .replaceAll(
+            '"',
+            "&quot;"
+        )
+
+        .replaceAll(
+            "'",
+            "&#039;"
+        );
 
 }
 
 </script>
 
+
 </body>
+
 </html>
